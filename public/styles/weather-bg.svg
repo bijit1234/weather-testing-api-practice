@@ -1,0 +1,57 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1440 900"
+     preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3999ed"/>
+      <stop offset="55%" stop-color="#8bd8f3"/>
+      <stop offset="100%" stop-color="#d9f5df"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1440" height="900" fill="url(#sky)"/>
+
+  <!-- Clouds -->
+  <g fill="#ffffff" opacity=".25">
+    <path d="M-80 180 Q-50 130 0 150
+             Q25 95 75 130 Q120 115 140 165
+             Q190 160 190 205 L-80 205Z"/>
+    <path d="M1260 220 Q1290 175 1340 190
+             Q1360 140 1410 165 Q1450 140 1490 200
+             L1490 245 L1260 245Z"/>
+    <path d="M-40 470 Q0 430 40 450
+             Q75 400 120 440 Q160 425 180 470
+             L180 500 L-40 500Z"/>
+  </g>
+
+  <!-- Distant hills -->
+  <path d="M0 690
+           Q150 650 300 690
+           T600 675 T900 690
+           T1200 660 T1440 690
+           L1440 900 L0 900Z"
+        fill="#a7dcae"/>
+
+  <!-- Foreground hills -->
+  <path d="M0 790
+           Q130 720 280 775
+           Q430 830 590 765
+           Q760 700 920 770
+           Q1080 825 1230 755
+           Q1350 710 1440 760
+           L1440 900 L0 900Z"
+        fill="#75bb91"/>
+
+  <!-- Bottom dark green landscape -->
+  <path d="M0 850
+           Q180 790 350 845
+           Q530 900 720 840
+           Q950 780 1120 845
+           Q1300 900 1440 830
+           L1440 900 L0 900Z"
+        fill="#398f83"/>
+
+</svg>

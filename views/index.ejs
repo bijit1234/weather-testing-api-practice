@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <h1>Welcome to the API Practice of Weather</h1>
+    <p>This is a simple weather API practice application.</p>
+    <form action="/" method="POST" class="form">
+        <section name="cities" class="cities">
+            <label for="city">Select a city:</label>
+            <select id="city" name="city">
+                <option value="kolkata">Kolkata</option>
+                <option value="howrah">Howrah</option>
+                <option value="hoogly">Hoogly</option>
+                <option value="durgapur">Durgapur</option>
+                <option value="asansol">Asansol</option>
+                <option value="siliguri">Siliguri</option>
+            </select>
+        </section>
+        <section class="weather-report">
+            <label for="units">Select units:</label>
+            <select id="units" name="units">
+                <option value="metric">Metric</option>
+                <option value="imperial">Imperial</option>
+            </select>
+        </section>
+        <button type="submit" class="form-submit">Get Weather</button>
+    </form>
+    <section id="weather-report">
+        <% if(locals.data){%>
+            <article>
+                <h2>Weather Report for <%= data.sys.country %>, <%=data.name%></h2>
+                <p>Temperature: <%= data.main.temp %><%= units === "imperial" ? "°F" : "°C" %></p>
+                <p>Weather: <%= data.weather[0].description %></p>
+                <p>Humidity: <%= data.main.humidity %>%</p>
+                <p>Wind Speed: <%= data.wind.speed %> <%= units === "imperial" ? "mph" : "m/s" %></p>
+            </article>
+        <%} %>
+        <% if(locals.error){%>
+            <div id="tag-error" class="tag-error">
+                <%=error%>
+            </div>
+        <%} %>
+    </section>
+</body>
+</html>

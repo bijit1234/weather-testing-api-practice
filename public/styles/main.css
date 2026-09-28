@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #183153;
+
+    background-image: url("/styles/weather-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 55px 20px;
+}
+
+/* Main heading */
+
+h1 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-shadow: 0 3px 12px rgba(20, 50, 90, 0.15);
+}
+
+body > p {
+    text-align: center;
+    color: #f0f8ff;
+    font-size: 1.1rem;
+    margin-bottom: 38px;
+}
+
+/* Search form */
+
+.form {
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    padding: 30px 35px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr auto;
+    align-items: end;
+    gap: 22px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(25, 65, 100, 0.12);
+}
+
+.form section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #344b6a;
+}
+
+.form select {
+    width: 100%;
+    padding: 15px 16px;
+
+    border: 1px solid #cbd9eb;
+    border-radius: 10px;
+    background: #ffffff;
+
+    color: #24364d;
+    font-size: 1rem;
+    font-family: inherit;
+
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form select:focus {
+    border-color: #3478ed;
+    box-shadow: 0 0 0 3px rgba(52, 120, 237, 0.13);
+}
+
+/* Search button */
+
+.form-submit {
+    padding: 16px 25px;
+    min-height: 52px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #3986f6, #3159e8);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(49, 89, 232, 0.25);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+/* Weather report card */
+
+#weather-report {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#weather-report article {
+    padding: 32px 36px;
+
+    background: rgba(255, 255, 255, 0.91);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(25, 65, 100, 0.13);
+}
+
+/* Weather heading */
+
+#weather-report h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #183153;
+    margin-bottom: 28px;
+}
+
+/* Weather details */
+
+#weather-report article p {
+    font-size: 1.05rem;
+    color: #526985;
+    padding: 15px 0;
+    border-bottom: 1px solid #e3ebf4;
+    line-height: 1.6;
+}
+
+#weather-report article p:last-child {
+    border-bottom: none;
+}
+
+/* Error message */
+
+.tag-error {
+    margin: 20px auto 0;
+    padding: 17px 22px;
+
+    max-width: 700px;
+
+    color: #b42332;
+    background: rgba(255, 241, 242, 0.96);
+
+    border: 1px solid #f3a6ad;
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 700px) {
+    body {
+        padding: 35px 16px;
+    }
+
+    body > p {
+        font-size: 0.95rem;
+        margin-bottom: 28px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 24px 20px;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+
+    #weather-report article {
+        padding: 24px 20px;
+    }
+
+    #weather-report h2 {
+        font-size: 1.3rem;
+    }
+
+    #weather-report article p {
+        font-size: 0.95rem;
+    }
+}
