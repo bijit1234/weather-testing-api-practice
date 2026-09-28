@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-const APIKEY = 'feb5ddbfb2f10e52c619f9b13084f587';
+const APIKEY = 'use-your-api-key';
 
 app.get("/", async (req, res) => {  
     try{
